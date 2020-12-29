@@ -10,7 +10,7 @@ networks:
 
 services:
   prometheus:
-    image: prom/prometheus:v2.1.0
+    image: prom/prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
       - prometheus_data:/prometheus
@@ -45,8 +45,6 @@ services:
     networks:
       - monitor-net
     restart: always
-    deploy:
-      mode: global
 
   cadvisor:
 #    image: google/cadvisor
@@ -62,8 +60,6 @@ services:
     networks:
       - monitor-net
     restart: always
-    deploy:
-      mode: global
 
   grafana:
     image: grafana/grafana
