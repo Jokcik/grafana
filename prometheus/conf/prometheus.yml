@@ -17,12 +17,8 @@ scrape_configs:
     metrics_path: '/metrics'
     static_configs:
       - targets: [ '192.168.1.48:8080' ]
-        labels:
-          group: 'cadvisor'
 
   - job_name: 'home-assistant_cadvisor'
     metrics_path: '/metrics'
     static_configs:
       - targets: [ '192.168.1.76:8080' ]
-        labels:
-          group: 'cadvisor'
