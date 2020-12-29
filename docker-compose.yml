@@ -50,9 +50,9 @@ services:
       mode: global
 
   cadvisor:
-    image: google/cadvisor
+#    image: google/cadvisor
 #    for arm
-#    image: budry/cadvisor-arm
+    image: budry/cadvisor-arm
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
