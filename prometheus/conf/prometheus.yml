@@ -8,3 +8,8 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
       - targets: ['195.9.195.14:9100']
+
+  - job_name: 'cups_nodejs'
+    scrape_interval: 5s
+    static_configs:
+      - targets: [ 'test.goodgame.ru:8001/prom-metrics' ]
